@@ -1,7 +1,8 @@
-# dotfiles
+![image](https://user-images.githubusercontent.com/73202594/190300126-bda37ad9-2f5f-4200-bcbe-bc65e5974703.png)
+---
 my dotfiles, used almost daily
 
-## install
+## 💾 install
 
 ```sh
 git clone https://github.com/terabyte3/dotfiles
@@ -9,7 +10,7 @@ cd dotfiles
 sudo bash install.sh
 ```
 
-## includes:
+## 📦 includes:
 - [wormhole-william](https://github.com/psanford/wormhole-william)
 - [apt-fast](https://github.com/ilikenwf/apt-fast)
 - [micro](https://micro-editor.github.io)
