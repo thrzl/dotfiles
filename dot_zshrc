@@ -1,0 +1,49 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+export EDITOR=micro
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# .bashrc
+
+# If not running interactively, don't do anything
+# [[ $- != *i* ]] && return
+
+# alias ls='ls --color=auto'
+# PS1='[\u@\h \W]\$ '
+
+alias xi='sudo xbps-install -Syu'
+# alias enable='sudo ln -s /etc/sv/$1 /var/service'
+# alias disable='rm /etc/sv/$1'
+alias zshrc='chezmoi edit ~/.zshrc && chezmoi apply && exec zsh'
+alias zshplugins='micro ~/.zsh_plugins.txt && exec zsh'
+
+eval $(keychain --eval id_ed25519 -q)
+
+source /home/terry/.antidote/antidote.zsh
+antidote load
+ABBR_GET_AVAILABLE_ABBREVIATION=1
+
+autoload -U promptinit; promptinit
+# prompt pure
+
+eval "$(zoxide init zsh)"
+
+# alias cd='z'
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# bun completions
+[ -s "/home/terry/.bun/_bun" ] && source "/home/terry/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:~/.cargo/bin:$PATH"
+# bindkey "^[[3~" delete-char
+# bindkey "^[[H" beginning-of-line
+# bindkey "^[[F" end-of-line
+
+
+export PATH=$PATH:/home/terry/.spicetify
