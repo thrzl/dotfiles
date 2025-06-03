@@ -22,7 +22,7 @@ alias zshplugins='micro ~/.zsh_plugins.txt && exec zsh'
 
 eval $(keychain --eval id_ed25519 -q)
 
-source /home/terry/.antidote/antidote.zsh
+source ~/.antidote/antidote.zsh
 antidote load
 ABBR_GET_AVAILABLE_ABBREVIATION=1
 
@@ -36,7 +36,7 @@ eval "$(zoxide init zsh)"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # bun completions
-[ -s "/home/terry/.bun/_bun" ] && source "/home/terry/.bun/_bun"
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -46,4 +46,4 @@ export PATH="$BUN_INSTALL/bin:~/.cargo/bin:$PATH"
 # bindkey "^[[F" end-of-line
 
 
-export PATH=$PATH:/home/terry/.spicetify
+export PATH=$PATH:~/.spicetify
