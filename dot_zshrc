@@ -19,6 +19,7 @@ alias xi='sudo xbps-install -Syu'
 # alias disable='rm /etc/sv/$1'
 alias zshrc='chezmoi edit ~/.zshrc && chezmoi apply && exec zsh'
 alias zshplugins='micro ~/.zsh_plugins.txt && exec zsh'
+alias ls="k"
 
 eval $(keychain --eval id_ed25519 -q)
 

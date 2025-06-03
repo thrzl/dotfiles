@@ -7,3 +7,5 @@ zsh-users/zsh-syntax-highlighting
 NickKaramoff/ohmyzsh-key-bindings
 
 olets/zsh-abbr
+
+supercrabtree/k
