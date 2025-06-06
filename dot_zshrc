@@ -17,9 +17,9 @@ fi
 alias xi='sudo xbps-install -Syu'
 # alias enable='sudo ln -s /etc/sv/$1 /var/service'
 # alias disable='rm /etc/sv/$1'
-alias zshrc='chezmoi edit ~/.zshrc && chezmoi apply && exec zsh'
+alias zshrc='chezmoi edit ~/.zshrc && chezmoi apply && echo applying changes && exec zsh'
 alias zshplugins='micro ~/.zsh_plugins.txt && exec zsh'
-alias ls="k"
+alias ls="lsd -l"
 
 eval $(keychain --eval id_ed25519 -q)
 
