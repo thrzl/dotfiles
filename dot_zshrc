@@ -48,3 +48,16 @@ export PATH="$BUN_INSTALL/bin:~/.cargo/bin:$PATH"
 
 
 export PATH=$PATH:~/.spicetify
+
+clone() {
+  if [[ $# -ne 1 ]]; then
+    echo "usage: clone username/repository"
+    return 1
+  fi
+
+  local repo="$1"
+  local url="git@github.com:${repo}.git"
+
+  echo "cloning ${url} ..."
+  git clone "${url}"
+}
